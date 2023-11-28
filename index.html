@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Holy Grail</title>
+  </head>
+  <header>Holy Grail of Templates </header>
+  <div class="wrapper">
+    <aside>Sidebar</aside>
+    <main>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+      <div>Item</div>
+    </main>
+  </div>
+
+  <footer>Footer</footer>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+        font-size: 65.5%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header,
+      footer {
+        background-color: rgb(30, 169, 255);
+        color: whitesmoke;
+        height: 7vh;
+        font-size: 1.75rem;
+        padding-top: 3vh;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        min-height: 80vh;
+      }
+
+      aside {
+        background-color: whitesmoke;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        background-color: white;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-gap: 1em;
+        grid-auto-rows: 25vh;
+      }
+
+      main > div {
+        background-color: rgb(172, 255, 47);
+        padding: 0.5em;
+        border-radius: 4px;
+        font-size: 1.75rem;
+        padding-top: 10vh;
+      }
+
+      @media (max-width: 770px) {
+        sidebar {
+          display: none;
+        }
+        .wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </body>
+</html>
